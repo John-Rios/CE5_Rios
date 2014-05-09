@@ -5,7 +5,7 @@ MIPS Computer Exercise:
 
 __________________________________________________________________________
 
-TASK #1: Simple MIPS Assembly Program (5pts all or nothing) 
+TASK #1: Simple MIPS Assembly Program (5pts all or nothing):
 
 (Assembly Program )
 
@@ -19,41 +19,48 @@ Sw $s2, 0x54($0)	| #$s2 is stored in the hexadecimal memory address x54.
 
 ___________________________________________________________________________
 
-TASK #2: Machine Code (35pts) 
+TASK #2: Machine Code (35pts):
 
 (Machine Code)
 
-Addi $s0, $0, 44		001000 | 00000 | 10000 | 0000 0000 0010 1100		  0x2010002C
-
-Addi $s1, $0, -37	  001000 | 00000 | 10001 | 1111 1111 1101 1011		  0x2011FFDB
+Addi $s0, $0, 44		  001000 | 00000 | 10000 | 0000 0000 0010 1100		    0x2010002C
+ 
+Addi $s1, $0, -37	  001000 | 00000 | 10001 | 1111 1111 1101 1011		    0x2011FFDB
 
 Add $s2, $s0, $s1	  000000 | 10000 | 10001 | 10010 | 00000 | 100000	  0x02119020
 
-Sw $s2, 0x54($0)	  101011 | 00000 | 10010 | 0000 0000 0101 0100		  0xAC120054
+Sw $s2, 0x54($0)	   101011 | 00000 | 10010 | 0000 0000 0101 0100		    0xAC120054
 
-Ori $S3, $S2, x8000	001101 | 10010 | 10011 | 1000 0000 0000 0000		  0x36538000
+Ori $S3, $S2, x8000	001101 | 10010 | 10011 | 1000 0000 0000 0000		    0x36538000
 
 ![pic1] (https://raw.github.com/John-Rios/CE5_Rios/master/Task2_MC.jpg)
 
 (Signal Descriptions) 
  
 (Waveform)
+
 ![pic2] (https://raw.github.com/John-Rios/CE5_Rios/master/Task2_WF_correct.jpg)
 
 ____________________________________________________________________________
 
 TASK #3: You now need to modify the MIPS single-cycle processor by adding the ori 
-Instruction (60pts) 
+Instruction (60pts):
 
- Design (20 pts): 
+ Design (20 pts)
  
   Schematic Modification 
+      
+  -I am 90% sure that you do not have to make any changes to the given schematic. Hopefully this is true otherwise the rest of my CE is incorrect.    
   
   ALU Decoder Table Modification 
+  
+  -The ALU decoder could handle the additional function of ori. This meant that all I needed to do was add in a line of code for the or function. Below shows where I added in the required code for ori.
   
   ![pic3] (https://raw.github.com/John-Rios/CE5_Rios/master/Task3_ALUcode.jpg)
 
   Main Decoder Modification 
+  
+  -The main decoder was capable of handling the desired additional function. To accomplish this all I needed to do was add an additional line of code. Below shows my addition to the mips file.
   
   ![pic4] (https://raw.github.com/John-Rios/CE5_Rios/master/Task3_Maincode.jpg)
   
@@ -84,4 +91,4 @@ Debugging and Errors: (Task 2) At first I was running into errors with my test b
 
 ____________________________
 
-Documentation: None
+Documentation: C2C Scott Agnolutto helped me understant the control unit main decoder table. No other help was received. 
