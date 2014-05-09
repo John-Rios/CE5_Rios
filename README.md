@@ -38,7 +38,7 @@ Ori $S3, $S2, x8000	001101 | 10010 | 10011 | 1000 0000 0000 0000		  0x36538000
 (Signal Descriptions) 
  
 (Waveform)
-![pic2] (https://raw.github.com/John-Rios/CE5_Rios/master/Task2_WF.jpg)
+![pic2] (https://raw.github.com/John-Rios/CE5_Rios/master/Task2_WF_correct.jpg)
 
 ____________________________________________________________________________
 
