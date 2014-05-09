@@ -74,6 +74,7 @@ Sw $s2, 0x54($0)	101011 | 00000 | 10010 | 0000 0000 0101 0100		0xAC120054
 ![pic5] (https://raw.github.com/John-Rios/CE5_Rios/master/Task3_MC.jpg)
 
 Testing Waveform
+
 ![pic6] (https://raw.github.com/John-Rios/CE5_Rios/master/Task3_WF.jpg)
 
 
