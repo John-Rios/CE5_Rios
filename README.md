@@ -54,6 +54,17 @@ Instruction (60pts):
   
   ALU Decoder Table Modification 
   
+|Instruction | OP5:0 | RegWrite | RegDst | AluSrc | Branch | MemWrite | MemtoReg | ALUOp1:0 | 
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|R-type|000000|1|1|0|0|0|0|10|
+|lw|100011|1|0|1|0|0|1|00|
+|sw|101011|0|x|1|0|1|x|00|
+|beq|000100|0|x|0|1|0|x|01|
+|addi|001000|1|0|1|0|0|0|00|
+|j|000100|0|x|0|x|0|x|xx|
+|ori|001101|1|0|1|0|0|0|11|
+
+  
   -The ALU decoder could handle the additional function of ori. This meant that all I needed to do was add in a line of code for the or function. Below shows where I added in the required code for ori.
   
   ![pic3] (https://raw.github.com/John-Rios/CE5_Rios/master/Task3_ALUcode.jpg)
